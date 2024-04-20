@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh">
+{% extends "release.html.j2" %}
 
+{% block content %}
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <title>百老匯影院</title>
+  <!-- other meta tags, stylesheets, or scripts can be included here -->
 </head>
-
 <body>
-
+  <!-- content of your web page goes here -->
   <a href="release.html">即將上映</a></li>
   <a href="day-movie.html">即日 / 預售電影</a></li>
   <a href="payment.html">票價</a></li>
@@ -34,5 +35,5 @@
     <p>&copy; 2024 百老匯影院. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
+{% endblock %}

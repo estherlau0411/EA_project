@@ -1,7 +1,12 @@
-<!DOCTYPE html>
-<html>
+{% extends 'bootstrap/releas.html.j2' %}
+{% block title %}
+  {% if title %}
+      {{ title }} - 即日電影
+  {% else %}
+      {{_('welcome to Broadway Chinema') }}
+  {% endif %}
+{% endblock %}
 <head>
-  <title>即日電影</title>
   <style>
     .photo {
       display: inline-block;
@@ -9,8 +14,7 @@
     }
   </style>
 </head>
-<body>
-
+{% block navbar %}
   <h1>即日 / 預售電影</h1>
   <div class="photo">
     <img src="毒舌大狀2023.jpg" alt="毒舌大狀" width="200" height="300">
@@ -56,5 +60,4 @@
     <img src="金手指.jpg" alt="金手指" width="200" height="300">
     <p>金手指</p>
   </div>
-</body>
-</html>
+{% endblock %}

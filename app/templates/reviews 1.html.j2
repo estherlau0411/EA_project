@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends "index.html.j2" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
@@ -61,7 +63,7 @@
     <h2>用户评论</h2>
 
     <ul id="userComments">
-        <!-- 用户评论将由 JavaScript 动态添加 -->
+        <!-- 用戶評論將由 JavaScript 動態添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}
