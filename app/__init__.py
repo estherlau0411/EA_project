@@ -57,4 +57,4 @@ def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 # You must keep the routes at the end.
-from app import routes, errors
+from app import routes
