@@ -56,6 +56,15 @@ def seatingmap():
     return render_template('seatingmap.html.j2')
 
 
+@app.route('/reviews', methods=['GET', 'POST'])
+def reviews():
+    return render_template('reviews.html.j2')
+
+@app.route('/reviewa', methods=['GET', 'POST'])
+def reviewa():
+    return render_template('reviewa.html.j2')
+
+
 
 @app.route('/index', methods=['GET', 'POST'])
 def index():

@@ -8,13 +8,17 @@
       <img src='/templates/毒舌大狀2023.jpg' alt="電影1">
       <h3>電影1</h3>
       <p>劇情簡介...</p>
-      <a href="毒舌大狀.html">查看詳情</a>
+    <li>
+      <a href="{{ url_for('reviews') }}" style="color: black;">{{ _('查看詳情') }}</a>
+    </li>
     </div>
     <div class="movie">
       <img src='/templates/飯戲攻心.jpg' alt="電影2">
       <h3>電影2</h3>
       <p>劇情簡介...</p>
-      <a href="飯氣攻心.html">查看詳情</a>
+    <li>
+      <a href="{{ url_for('reviewa') }}" style="color: black;">{{ _('查看詳情') }}</a>
+    </li>
     </div>
   </section>
 
