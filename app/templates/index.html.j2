@@ -2,10 +2,15 @@
 
 {% block content %}
 <body>
+  <div class="logo-row">
+    <a href="{{ url_for('index') }}">
+      <img src="https://www.asia.ccb.com/hongkong_tc/personal/credit_cards/promotions/cinemas-offers/images/broadway-circuit-logo.jpg" alt="Logo" class="logo" style="width: 200px"></a>
+  </div>
+
   <section>
     <h2>最新上映電影</h2>
     <div class="movie">
-      <img src='/templates/毒舌大狀2023.jpg' alt="電影1">
+      <img src="{{ url_for('static', filename='毒舌大狀2023.jpg') }}" alt="電影1" width="200" height="300">
       <h3>電影1</h3>
       <p>劇情簡介...</p>
     <li>
@@ -13,7 +18,7 @@
     </li>
     </div>
     <div class="movie">
-      <img src='/templates/飯戲攻心.jpg' alt="電影2">
+      <img src="{{ url_for('static', filename='飯戲攻心.jpg') }}" alt="電影1" width="200" height="300">
       <h3>電影2</h3>
       <p>劇情簡介...</p>
     <li>
