@@ -16,11 +16,19 @@
       "protocol": "http",
       "onAutoForward": "openPreview"
     },
+    "5050": {
+      "label": "pgadmin",
+      "onAutoForward": "openPreview"
+    },
+    "8025": {
+      "label": "mailhog",
+      "onAutoForward": "openPreview"
+    }
   },
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "templates/index.html.j2"
+        "templates/index.html"
       ]
     },
     "vscode": {

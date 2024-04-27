@@ -1,39 +1,26 @@
-{% extends "release.html.j2" %}
-
-{% block content %}
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <title>百老匯影院</title>
-  <!-- other meta tags, stylesheets, or scripts can be included here -->
-</head>
-<body>
-  <!-- content of your web page goes here -->
-  <a href="release.html">即將上映</a></li>
-  <a href="day-movie.html">即日 / 預售電影</a></li>
-  <a href="payment.html">票價</a></li>
-  <a href="#">聯繫我們</a></li>
-
-
-  <section>
-    <h2>最新上映電影</h2>
-    <div class="movie">
-      <img src="毒舌大狀2023.jpg" alt="電影1">
-      <h3>電影1</h3>
-      <p>劇情簡介...</p>
-      <a href="毒舌大狀.html">查看詳情</a>
-    </div>
-    <div class="movie">
-      <img src="飯戲攻心.jpg" alt="電影2">
-      <h3>電影2</h3>
-      <p>劇情簡介...</p>
-      <a href="飯氣攻心.html">查看詳情</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 百老匯影院. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+{% extends "base.html.j2" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+    <h1>{{ _('Hi, %(username)s!', username=current_user.username) }}</h1>
+    {% if form %}
+        {{ wtf.quick_form(form) }}
+        <br/>
+    {% endif %}
+    {% for post in posts %}
+        {% include "_post.html.j2" %}
+    {% endfor %}
+    <nav aria-label="...">
+        <ul class="pager">
+            <li class="previous{% if not prev_url %} disabled{% endif %}">
+                <a href="{{ prev_url or '#' }}">
+                    <span aria-hidden="true">&larr;</span> {{ _('Newer posts') }}
+                </a>
+            </li>
+            <li class="next{% if not next_url %} disabled{% endif %}">
+                <a href="{{ next_url or '#' }}">
+                    {{ _('Older posts') }} <span aria-hidden="true">&rarr;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 {% endblock %}
