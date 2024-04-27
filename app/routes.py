@@ -18,7 +18,7 @@ def before_request():
     g.locale = str(get_locale())
 
 @app.route('/', methods=['GET', 'POST'])
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/booking', methods=['GET', 'POST'])
 def home():
     form = BookingForm()
     if form.validate_on_submit():
@@ -32,7 +32,29 @@ def home():
         db.session.commit()
         flash('Booking created successfully!')
         return redirect(url_for('main_bp.index'))
-    return render_template('index.html.j2', form=form)
+    return render_template('firstpage.html.j2', form=form)
+
+
+@app.route('/boad', methods=['GET', 'POST'])
+def boad():
+    return render_template('index.html.j2')
+
+@app.route('/movie', methods=['GET', 'POST'])
+def movie():
+    return render_template('movie.html.j2')
+
+@app.route('/payment', methods=['GET', 'POST'])
+def payment():
+    return render_template('payment.html.j2')
+
+@app.route('/daymovie', methods=['GET', 'POST'])
+def daymovie():
+    return render_template('daymovie.html.j2')
+
+@app.route('/seatingmap', methods=['GET', 'POST'])
+def seatingmap():
+    return render_template('seatingmap.html.j2')
+
 
 
 @app.route('/index', methods=['GET', 'POST'])

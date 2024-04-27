@@ -39,6 +39,21 @@
                     <li>
                         <a href="{{ url_for('home') }}" style="color: white;">{{ _('book') }}</a>
                     </li>
+                    <li>
+                        <a href="{{ url_for('boad') }}" style="color: white;">{{ _('home') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('movie') }}" style="color: white;">{{ _('movie') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('payment') }}" style="color: white;">{{ _('payment') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('daymovie') }}" style="color: white;">{{ _('daymovie') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('seatingmap') }}" style="color: white;">{{ _('seatingmap') }}</a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}

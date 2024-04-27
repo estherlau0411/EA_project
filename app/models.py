@@ -90,7 +90,7 @@ class Post(db.Model):
 
 class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100))
+    title = db.Column(db.String(100), nullable=False)
     director = db.Column(db.String(100))
     release_date = db.Column(db.Date)
 
@@ -124,7 +124,9 @@ class Booking(db.Model):
     time = db.Column(db.String(10), nullable=False)
     price = db.Column(db.Integer, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    screening_id = db.Column(db.Integer, db.ForeignKey('screening.id'), nullable=False)
     seat_id = db.Column(db.Integer, db.ForeignKey('seat.id'), nullable=False)
+    booking_time = db.Column(db.DateTime, default=datetime.utcnow)
 
     user = db.relationship('User', backref='bookings')
     seat = db.relationship('Seat', backref='booking_history', foreign_keys=[seat_id])
