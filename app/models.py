@@ -1,3 +1,6 @@
+from flask import Flask, request, jsonify
+import psycopg2
+import psycopg2.extras
 from datetime import datetime, timedelta, timezone
 from hashlib import md5
 from app import app, db, login
@@ -12,6 +15,36 @@ followers = db.Table(
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
 )
 
+
+def get_db_connection():
+    conn = psycopg2.connect(
+        host='localhost',
+        database='yourdatabase',
+        user='yourusername',
+        password='yourpassword')
+    return conn
+
+@app.route('/data', methods=['POST'])
+def add_data():
+    new_data = request.json
+    conn = get_db_connection()
+    cur = conn.cursor()
+    cur.execute('INSERT INTO your_table (column1, column2) VALUES (%s, %s);',
+                (new_data['column1'], new_data['column2']))
+    conn.commit()
+    cur.close()
+    conn.close()
+    return 'Data added successfully', 201
+
+@app.route('/data', methods=['GET'])
+def get_data():
+    conn = get_db_connection()
+    cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+    cur.execute('SELECT * FROM your_table;')
+    data = cur.fetchall()
+    cur.close()
+    conn.close()
+    return jsonify(data)
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)

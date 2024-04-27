@@ -65,6 +65,10 @@ def reviewa():
     return render_template('reviewa.html.j2')
 
 
+@app.route('/settlement', methods=['GET', 'POST'])
+def settlement():
+    return render_template('settlement.html.j2')
+
 
 @app.route('/index', methods=['GET', 'POST'])
 def index():

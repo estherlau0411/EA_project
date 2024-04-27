@@ -1,4 +1,4 @@
-{% extends 'base.html.j2' %}
+{% extends 'seatingmap.html.j2' %}
 
 {% block content %}
 <head>
@@ -63,8 +63,11 @@
         <p class="total-price">總價: $300</p>
     </div>
 
-    <div class="payment-button">
-        <a href="支付成功.html">立即付款</a>
+    <div style="text-align: center;">
+    <a href="{{ url_for('payment') }}" style="text-decoration: none;">
+        <button type="button">確認支付</button>
+    </a>
     </div>
+    
 </body>
 {% endblock %}
