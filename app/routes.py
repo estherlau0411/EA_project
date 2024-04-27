@@ -79,7 +79,7 @@ def index():
         'index', page=posts.next_num) if posts.next_num else None
     prev_url = url_for(
         'index', page=posts.prev_num) if posts.prev_num else None
-    return render_template('index.html.j2', title=('home'),
+    return render_template('firstpage.html.j2', title=('home'),
                            posts=posts.items, next_url=next_url,
                            prev_url=prev_url)
 
@@ -94,7 +94,7 @@ def explore():
         'explore', page=posts.next_num) if posts.next_num else None
     prev_url = url_for(
         'explore', page=posts.prev_num) if posts.prev_num else None
-    return render_template('index.html.j2', title=_('Explore'),
+    return render_template('firstpage.html.j2', title=_('Explore'),
                            posts=posts.items, next_url=next_url,
                            prev_url=prev_url)
 
