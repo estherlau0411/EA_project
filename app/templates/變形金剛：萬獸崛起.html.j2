@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'movie.html.j2' %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
-    <img src="變形金剛：萬獸崛起.jpg" alt="變形金剛：萬獸崛起">
+    <img src="{{ url_for('static', filename='變形金剛：萬獸崛起.jpg') }}" width="200" height="300">
 </head>
 <body>
     <h1>电影簡介</h1>
@@ -37,7 +38,7 @@
     <main>
         <section>
             <h2>變形金剛：萬獸崛起預告片</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Mf7n43tLrRs" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Mf7n43tLrRs" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -59,4 +60,4 @@
         <!-- 用户评论将由 JavaScript 动态添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}

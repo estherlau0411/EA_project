@@ -69,6 +69,83 @@ def reviewa():
 def settlement():
     return render_template('settlement.html.j2')
 
+@app.route('/movie1')
+def movie1():
+    return render_template('機密特務：阿蓋爾.html.j2')
+
+@app.route('/movie2')
+def movie2():
+    return render_template('愛愛愛上你.html.j2')
+
+@app.route('/movie3')
+def movie3():
+    return render_template('外星+人2：回到未來.html.j2')
+
+@app.route('/movie4')
+def movie4():
+    return render_template('可憐的東西.html.j2')
+
+@app.route('/movie5')
+def movie5():
+    return render_template('天魔：惡之初.html.j2')
+
+@app.route('/movie6')
+def movie6():
+    return render_template('蜘蛛夫人.html.j2')
+
+@app.route('/movie7')
+def movie7():
+    return render_template('青春18×2 通往有你的旅程.html.j2')
+
+@app.route('/movie8')
+def movie8():
+    return render_template('伏慄熊.html.j2')
+
+@app.route('/movie9')
+def movie9():
+    return render_template('哥吉拉與金剛：新帝國.html.j2')
+
+@app.route('/movie10')
+def movie10():
+    return render_template('沙丘：第二部.html.j2')
+
+@app.route('/movie11')
+def movie11():
+    return render_template('毒舌大狀2023.html.j2')
+
+@app.route('/movie12')
+def movie12():
+    return render_template('飯戲攻心.html.j2')
+
+
+@app.route('/movie13')
+def movie13():
+    return render_template('avd.html.j2')
+
+
+@app.route('/movie14')
+def movie14():
+    return render_template('灌籃高手.html.j2')
+
+@app.route('/movie15')
+def movie15():
+    return render_template('鈴芽之旅.html.j2')
+
+@app.route('/movie16')
+def movie16():
+    return render_template('捍衛任務4.html.j2')
+
+@app.route('/movie17')
+def movie17():
+    return render_template('玩命關頭X.html.j2')
+
+@app.route('/movie18')
+def movie18():
+    return render_template('變形金剛：萬獸崛起.html.j2')
+
+@app.route('/movie19')
+def movie19():
+    return render_template('金手指.html.j2')
 
 @app.route('/index', methods=['GET', 'POST'])
 def index():

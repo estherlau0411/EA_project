@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'movie.html.j2' %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
-    <img src="伏慄熊.jpg" alt="伏慄熊">
+    <img src="{{ url_for('static', filename='伏慄熊.jpg') }}" width="200" height="300">
 </head>
 <body>
     <h1>电影簡介</h1>
@@ -31,7 +32,7 @@
     <main>
         <section>
             <h2>伏慄熊預告片</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PPSx2EW4bj0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PPSx2EW4bj0" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -53,4 +54,4 @@
         <!-- 用户评论将由 JavaScript 动态添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}

@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'movie.html.j2' %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
-    <img src="鈴芽之旅.jpg" alt="鈴芽之旅">
+    <img src="{{ url_for('static', filename='鈴芽之旅.jpg') }}" width="200" height="300">
 </head>
 <body>
     <h1>电影簡介</h1>
@@ -24,7 +25,7 @@
     <main>
         <section>
             <h2>鈴芽之旅預告片</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/v=cHI_O_kjmjk" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cHI_O_kjmjk" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -46,4 +47,4 @@
         <!-- 用户评论将由 JavaScript 动态添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}

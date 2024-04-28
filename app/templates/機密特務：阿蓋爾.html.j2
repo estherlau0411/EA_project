@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'movie.html.j2' %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
-    <img src="機密特務：阿蓋爾.jpg" alt="機密特務：阿蓋爾 ">
+    <img src="{{ url_for('static', filename='機密特務：阿蓋爾.jpg') }}" alt="機密特務：阿蓋爾"> 
 </head>
 <body>
     <h1>电影簡介</h1>
@@ -32,7 +33,7 @@
     <main>
         <section>
             <h2>機密特務：阿蓋爾預告片</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=W6ElB8Yv8uc" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W6ElB8Yv8uc" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -54,4 +55,4 @@
         <!-- 用户评论将由 JavaScript 动态添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}

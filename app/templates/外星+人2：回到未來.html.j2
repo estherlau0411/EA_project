@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends 'movie.html.j2' %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
@@ -30,7 +31,7 @@
     <main>
         <section>
             <h2>外星+人2：回到未來預告片</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=1Q84gBWK40o" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1Q84gBWK40o" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -52,4 +53,4 @@
         <!-- 用户评论将由 JavaScript 动态添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}

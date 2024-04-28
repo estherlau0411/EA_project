@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'movie.html.j2' %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
-    <img src="愛愛愛上你.jpg" alt="愛愛愛上你 ">
+     <img src="{{ url_for('static', filename='愛愛愛上你.jpg') }}" alt="愛愛愛上你">
 </head>
 <body>
     <h1>电影簡介</h1>
@@ -36,7 +37,7 @@
     <main>
         <section>
             <h2>愛愛愛上你預告片</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=3LHdUrdPIMw" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3LHdUrdPIMw" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -58,4 +59,4 @@
         <!-- 用户评论将由 JavaScript 动态添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}

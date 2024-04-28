@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'movie.html.j2' %}
+
+{% block content %}
 <head>
     <title>电影影评</title>
     <link rel="stylesheet" href="4115group project.css">
-    <img src="青春18×2 通往有你的旅程.jpg" alt="青春18×2 通往有你的旅程">
+    <img src="{{ url_for('static', filename='青春18×2 通往有你的旅程.jpg') }}" width="200" height="300">
 </head>
 <body>
     <h1>电影簡介</h1>
@@ -26,7 +27,7 @@
     <main>
         <section>
             <h2>青春18×2 通往有你的旅程預告片</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=tumLwtwA2Xg" frameborder="0" allowfullscreen></iframe>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/tumLwtwA2Xg" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -48,4 +49,4 @@
         <!-- 用户评论将由 JavaScript 动态添加 -->
     </ul>
 </body>
-</html>
+{% endblock %}
